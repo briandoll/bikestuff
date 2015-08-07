@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+  {% assign sorted_categories = site.categories | sort %}
+
+  <ul>
+  {% for category in sorted_categories %}
+    <li><a href="#{{ category | first }}">{{ category | first }}</a></li>
+  {% endfor %}
+  </ul>
+
+  {% for category in sorted_categories %}
+    <a name="{{ category | first }}"</a>
+    <h3>{{ category | first }}</h3>
+    <ul>
+      {% for posts in category %}
+        {% for post in posts %}
+          {% if post.website_url %}
+            <li><a href="{{ post.website_url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+</div>
