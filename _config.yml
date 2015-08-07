@@ -3,3 +3,4 @@ title: Bike Stuff
 email: brian@emphaticsolutions.com
 description: A directory of awesome bike stuff
 markdown: kramdown
+baseurl: /bikestuff
