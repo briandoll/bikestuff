@@ -11,10 +11,13 @@ layout: default
   {% endfor %}
   </ul>
 
+<div class="container-fluid">
+  <div class="row">
   {% for category in sorted_categories %}
-    <a name="{{ category | first }}"</a>
-    <h3>{{ category | first | upcase }}</h3>
-    <ul>
+    <div class="col-xs-6 col-sm-3">
+      <a name="{{ category | first }}"</a>
+      <h3>{{ category | first | upcase }}</h3>
+      <ul>
       {% for posts in category %}
         {% for post in posts %}
           {% if post.website_url %}
@@ -22,6 +25,8 @@ layout: default
           {% endif %}
         {% endfor %}
       {% endfor %}
-    </ul>
-  {% endfor %}
-
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</div>
