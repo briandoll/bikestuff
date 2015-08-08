@@ -2,16 +2,8 @@
 layout: default
 ---
 
-  {% assign sorted_categories = site.categories | sort %}
+{% assign sorted_categories = site.categories | sort %}
 
-
-  <ul class="nav nav-pills">
-  {% for category in sorted_categories %}
-    <li role="presentation"><a href="#{{ category | first }}">{{ category | first | upcase }}</a></li>
-  {% endfor %}
-  </ul>
-
-<div class="container-fluid">
   <div class="row">
   {% for category in sorted_categories %}
     <div class="col-xs-6 col-sm-3">
@@ -29,4 +21,3 @@ layout: default
     </div>
     {% endfor %}
   </div>
-</div>

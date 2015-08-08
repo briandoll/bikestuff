@@ -6,3 +6,19 @@ ul {
 li {
   padding: 5px;
 }
+
+.header {
+  color: black;
+  border-bottom: thin solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.site-footer {
+  border-top: thin solid #ccc;
+  padding: 15px;
+}
+
+.center {
+  text-align:center;
+}
